@@ -10,9 +10,9 @@ node {
   stage 'Update Python Modules'
   // Create a virtualenv in this folder, and install or upgrade packages
   // specified in requirements.txt; https://pip.readthedocs.io/en/1.1/requirements.html
-  sh 'virtualenv env && source MYVENV/bin/activate && pip install --upgrade -r requirements.txt'
+  sh 'virtualenv MYVENV && source MYVENV/Scripts/activate && pip install --upgrade -r requirements.txt'
   
   stage 'Test'
   // Invoke Django's tests
-  sh 'source env/bin/activate && python ./manage.py runtests'
+  sh 'source MYVENV/Scripts/activate && python ./manage.py runtests'
 }
