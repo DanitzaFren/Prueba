@@ -9,5 +9,5 @@ node {
 
   stage 'Test'
   // Invoke Django's tests
-  sh 'source myvenv/Scripts/activate && python ./manage.py runtests'
+  sh 'source MYVENV/Scripts/activate && python ./manage.py runtests'
 }
